@@ -1,3 +1,37 @@
+<!-- ------------------------------left side bar start-- --------------------------->
+<div id="mySidenav" class="sidenav" style="margin-top: 10px">
+  <a href="javascript:void(0)" class="closebtn" (click)="cNav()">&times;</a>
+
+  <a routerLink="/home"><i class="lnr lnr-home"></i> &nbsp; Home</a>
+  <a routerLink="/allsongs"> <i class="lnr lnr-music-note"></i> &nbsp; All Songs</a>
+  <a routerLink="/allalbums"><i class="lnr lnr-indent-increase"></i> &nbsp; Albums</a>
+  <a routerLink="/allartists"><i class="lnr lnr-users"></i> &nbsp; Artists</a>
+  <a routerLink="/favourites"><i class="lnr lnr-heart"></i> &nbsp; My Fav</a>
+  <a routerLink="/userdetails"><i class="lnr lnr-pencil"></i> &nbsp; User Profile</a>
+  <a routerLink="/adminhome" class="adminbtn" id="adminbutton"><i class="lnr lnr-apartment"></i> &nbsp;Admin Home</a>
+
+</div>
+
+<div style="background-color: black; height: 50px;">
+  <span style="font-size:25px;cursor:pointer;padding-top: 10px; color: aliceblue; float: left;"
+      (click)="oNav()">&#9776; Menu
+  </span>
+
+
+  <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       {{user.userFirstName}}       
+      <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
+          <span class="glyphicon glyphicon-log-out" (click)="logout()"> Logout</span>
+      </button>
+  </h5>
+</div>
+
+
+<!-- side bar enddd ----------------------------------------------------------------------------------------------------------   -->
+
+
 <div class="container">
 
     <h4 style="background-color: lightcoral; color:skyblue ; text-align: center;font-size: 40px">Create Artist</h4>

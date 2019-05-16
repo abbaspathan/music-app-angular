@@ -9,22 +9,29 @@ import { User } from '../user/user';
 })
 export class AdminComponent implements OnInit{
 
-
     constructor(private router:Router){}
-user:User;
-ngOnInit(){
-this.user = JSON.parse(sessionStorage.getItem("user"));
-}
+
+    user:User;
+
+    ngOnInit(){
+        this.user = JSON.parse(sessionStorage.getItem("user"));
+         
+            //null user redirect to home page 
+            if(this.user==null){
+            alert("please log in to access");
+            this.router.navigate(["/userhome"])
+        }
+    }
 
     oNav() {
         document.getElementById("mySidenav").style.width = "200px";
-      }
-      
-       cNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
+    }
 
-      logout(){
+    cNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+    logout() {
         sessionStorage.removeItem("user");
         this.router.navigate(["/signin"]);
     }

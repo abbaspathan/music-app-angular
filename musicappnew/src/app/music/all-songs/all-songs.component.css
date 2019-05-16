@@ -40,3 +40,6 @@
   }
 
 /* nav bar css end */
+.sidenav .adminbtn{
+  display: none;
+}

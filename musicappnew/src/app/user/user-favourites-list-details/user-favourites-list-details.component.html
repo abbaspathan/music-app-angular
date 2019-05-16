@@ -8,6 +8,7 @@
     <a routerLink="/allartists"><i class="lnr lnr-users"></i> &nbsp; Artists</a>
     <a routerLink="/favourites"><i class="lnr lnr-heart"></i> &nbsp; My Fav</a>
     <a routerLink="/userdetails"><i class="lnr lnr-pencil"></i> &nbsp; User Profile</a>
+    <a routerLink="/adminhome" class="adminbtn" id="adminbutton"><i class="lnr lnr-apartment"></i> &nbsp;Admin Home</a>
 
 </div>
 
@@ -20,50 +21,16 @@
     <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         {{user.userFirstName}}   
+         {{user.userFirstName}}       
         <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
-            <span (click)="logout()" class="glyphicon glyphicon-log-out"> Logout</span>
+            <span class="glyphicon glyphicon-log-out" (click)="logout()"> Logout</span>
         </button>
     </h5>
-
 </div>
 
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" style="text-align: center">Feedback</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Name:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-form-label">Email:</label>
-                        <input type="text" class="form-control" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send</button>
-            </div>
-
-        </div>
-
-    </div>
-</div>
 
 <!-- side bar enddd ----------------------------------------------------------------------------------------------------------   -->
+-- side bar enddd ----------------------------------------------------------------------------------------------------------   -->
 
 <div  style="background-color: lightcyan">
         <div class="container" style="width: 85%;margin: 0 auto;">

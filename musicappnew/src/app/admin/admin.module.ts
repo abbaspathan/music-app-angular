@@ -18,7 +18,7 @@ import { AdminUserDetailsComponent } from './admin-user-details/admin-user-detai
         AdminAlbumComponent,
         CreateArtistComponent,
         AdminUploadSongComponent,
-        AdminUserDetailsComponent
+        AdminUserDetailsComponent,
     ],
 
     imports: [

@@ -23,13 +23,24 @@ export class AllSongsComponent implements OnInit {
     ngOnInit() {
         this.user = JSON.parse(sessionStorage.getItem("user"));
 
+        //null user redirect to home page 
+            if(this.user==null){
+            alert("please log in to access");
+            this.router.navigate(["/userhome"])
+        }
+
+            //admin home page button
+            if(this.user.role == "admin"){
+                document.getElementById("adminbutton").style.display="block";
+            }
+
         if (this.user != null) {
             this.musicService.allSongs().subscribe((data) => {
                 this.songs = data;
                 console.log(data);
             });
         } else {
-            this.router.navigate(["/signin"]);
+            this.router.navigate(["/userhome"]);
             alert("please login to access");
         }
     }

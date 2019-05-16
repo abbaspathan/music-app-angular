@@ -1,6 +1,7 @@
 /* nav bar css start */
     
-  .sidenav {
+  
+.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -37,6 +38,11 @@
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+  }
+
+
+  .sidenav .adminbtn{
+    display: none;
   }
 
 /* nav bar css end */

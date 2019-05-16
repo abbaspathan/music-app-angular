@@ -11,8 +11,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class UserLoginComponent implements OnInit {
 
-    email: string;
-    password: string;
+   
     user: User;
     auth: Authenticate;
 

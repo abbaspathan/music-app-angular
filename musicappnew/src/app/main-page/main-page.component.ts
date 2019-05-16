@@ -13,20 +13,16 @@ user:User;
 
     ngOnInit(){
         this.user = JSON.parse(sessionStorage.getItem("user"));
-
-
+       
+        if(this.user==null){
+            alert("please log in to access");
+            this.router.navigate(["/userhome"])
+        }
+        
         //admin home page button
         if(this.user.role == "admin"){
             document.getElementById("adminbutton").style.display="block";
         }
-
-
-        if(this.user!=null){
-            
-        }else{
-            alert("please login to access");
-           this.router.navigate(["/signin"]);
-       }
     }
 
     oNav() {

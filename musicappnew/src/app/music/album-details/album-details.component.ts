@@ -25,6 +25,17 @@ export class AlbumDetailsComponent implements OnInit {
     
     ngOnInit(): void {
         this.user = JSON.parse(sessionStorage.getItem("user"));
+        //null user redirect to home page 
+            if(this.user==null){
+            alert("please log in to access");
+            this.router.navigate(["/userhome"])
+        }
+
+    //admin home page button
+    if(this.user.role == "admin"){
+        document.getElementById("adminbutton").style.display="block";
+    }
+
         if (this.user != null) {
             this.route.paramMap.subscribe((map) => {
                 let albumId = Number(map.get("albumId"));
@@ -35,7 +46,7 @@ export class AlbumDetailsComponent implements OnInit {
 
             });
         } else {
-            this.router.navigate(["/signin"]);
+            this.router.navigate(["/userhome"]);
             alert("please login to access");
         }
     }

@@ -40,7 +40,9 @@
   }
 
 /* nav bar css end */
-
+.sidenav .adminbtn{
+    display: none;
+  }
 
 .ul1{
     margin: 30px;

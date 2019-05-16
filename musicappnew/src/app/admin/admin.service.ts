@@ -16,7 +16,7 @@ export class AdminService{
     //     return this.http.get<Book[]>(this.baseUrl + "books/" + _id);
     // }
     findAllUser():Observable<User[]>{
-        return this.http.get<User[]>(this.baseUrl + "user");
+        return this.http.get<User[]>(this.baseUrl + "user" );
     }
 
     CreateAlbum():Observable<Song[]>{

@@ -13,4 +13,5 @@ export const adminRoutes : Routes = [
   { path: "create-artist", component:CreateArtistComponent},
   { path: "admin-upload-song" , component:AdminUploadSongComponent },
   { path: "adminuserdetails/:userEmail" , component:AdminUserDetailsComponent },
+
 ]

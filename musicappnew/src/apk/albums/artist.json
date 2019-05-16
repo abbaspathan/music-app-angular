@@ -1,0 +1,61 @@
+{ 
+    "artistId": 101,
+    "artistImage": "assets/images/v1.jpg",
+    "artistName": "fantum",
+    "songs": [
+        {
+            "songId":101,
+            "songTitle": "Blue",
+            "songImage": "assets/images/v1.jpg",
+            "songUrl": "assets/media/Blue Browne.ogg",
+            "albumName": "fantum",
+            "artistName": "shakira",
+            "region": "english"  
+        },
+        {
+            "songId":101,
+            "songTitle": "Georgia",
+            "songImage": "assets/images/v1.jpg",
+            "songUrl": "assets/media/Georgia.mp3",
+            "albumName": "fantum",
+            "artistName": "shakira",
+            "region": "english"
+        },
+        {
+            "songId":101,
+            "songTitle": "Demo",
+            "songImage": "assets/images/v1.jpg",
+            "songUrl": "assets/media/demo.mp3",
+            "albumName": "fantum",
+            "artistName": "shakira",
+            "region": "english"  
+        },
+        {
+            "songId":101,
+            "songTitle": "Blue",
+            "songImage": "assets/images/v1.jpg",
+            "songUrl": "assets/media/Blue Browne.ogg",
+            "albumName": "fantum",
+            "artistName": "shakira",
+            "region": "english"
+        },
+        {
+            "songId":101,
+            "songTitle": "Blue",
+            "songImage": "assets/images/v1.jpg",
+            "songUrl": "assets/media/Blue Browne.ogg",
+            "albumName": "fantum",
+            "artistName": "shakira",
+            "region": "english"  
+        },
+        {
+            "songId":101,
+            "songTitle": "Blue",
+            "songImage": "assets/images/v1.jpg",
+            "songUrl": "assets/media/Blue Browne.ogg",
+            "albumName": "fantum",
+            "artistName": "shakira",
+            "region": "english"
+        }
+    ]
+}

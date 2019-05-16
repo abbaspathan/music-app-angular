@@ -1,0 +1,9 @@
+{ 
+    "songId":101,
+    "songTitle": "Blue",
+    "songImage": "assets/images/v1.jpg",
+    "songUrl": "assets/media/Blue Browne.ogg",
+    "albumName": "fantum",
+    "artistName": "shakira",
+    "region": "english"   
+}

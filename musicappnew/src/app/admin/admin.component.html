@@ -1,0 +1,67 @@
+<!-- ------------------------------left side bar start-- -------------------------
+<div id="mySidenav" class="sidenav" style="margin-top: 10px">
+        <a href="javascript:void(0)" class="closebtn" (click)="cNav()">&times;</a>
+      
+       
+
+        <a routerLink="/admin-user">Users</a>
+        <a routerLink="/admin-create-album">Create Album</a>
+        <a routerLink="/admin-upload-song">Upload Songs</a>
+        <a routerLink="/create-artist">Create Artist Album</a>
+      
+      </div>
+      
+      <div style="background-color: black; height: 50px;">
+        <span style="font-size:25px;cursor:pointer;padding-top: 10px; color: aliceblue; float: left;"
+            (click)="oNav()">&#9776; Menu
+        </span>
+      
+      
+        <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               {{user.userFirstName}}   
+            <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
+                <span (click)="logout()" class="glyphicon glyphicon-log-out"> Logout</span>
+            </button>
+        </h5>
+      
+      </div> -->
+
+
+
+
+<div id="mySidenav" class="sidenav" style="margin-top: 10px">
+
+    <a href="javascript:void(0)" class="closebtn" (click)="cNav()">&times;</a>
+
+    <a routerLink="/home"><i class="lnr lnr-home"></i> &nbsp; Home</a>
+    <a routerLink="/allsongs"> <i class="lnr lnr-music-note"></i> &nbsp; All Songs</a>
+    <a routerLink="/allalbums"><i class="lnr lnr-indent-increase"></i> &nbsp; Albums</a>
+    <a routerLink="/allartists"><i class="lnr lnr-users"></i> &nbsp; Artists</a>
+    <a routerLink="/favourites"><i class="lnr lnr-heart"></i> &nbsp; My Fav</a>
+    <a routerLink="/userdetails"><i class="lnr lnr-pencil"></i> &nbsp; User Profile</a>
+
+</div>
+
+<div style="background-color: black; height: 50px;">
+    <span style="font-size:25px;cursor:pointer;padding-top: 10px; color: aliceblue; float: left;"
+        (click)="oNav()">&#9776; Menu
+    </span>
+
+
+    <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
+        <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
+            <span routerLink="" class="glyphicon glyphicon-log-out"> Logout</span>
+        </button>
+    </h5>
+
+</div>
+
+
+<img src="assets/images/adminimage.jpg" style="width:1440px; height:739px">
+
+<button class="button" routerLink="/admin-user">Users</button>
+<button class="button1" routerLink="/admin-create-album">Create Album</button>
+<button class="button2" routerLink="/admin-create-album">Upload Songs</button>
+<button class="button3" routerLink="/create-artist">Create Artist Album</button>

@@ -1,0 +1,42 @@
+<div class="container">
+
+    <h4 style="background-color: black; color:white ; text-align: center;font-size: 40px">All Users</h4>
+    <table class="table table-bordered">
+
+        <thead>
+
+            <tr>
+
+                <th style="text-align: center">User FirstName</th>
+
+                <th style="text-align: center">User Email</th>
+
+                <th style="text-align: center"></th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor= "let user of user">
+                <td>{{user.userFirstName}}</td>
+
+                <td>{{user.userEmail}}</td>
+                <td>
+                
+               
+                     <button type="button" routerLink="/adminuserdetails/{{user.userEmail}}" class="btn btn-block" style="background-color: #ff9f00; width: 40%; display: block; margin: 0 auto">View Details</button>
+                   
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+

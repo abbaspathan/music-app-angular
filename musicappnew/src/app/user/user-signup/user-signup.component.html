@@ -1,0 +1,135 @@
+<img src="assets/images/loginimage.jpg" height="789px" width=" 1440px" style="position: absolute">
+<div class="container signup-box">
+        <div class="signup-form; col-md-4 col-md-offset-4">
+
+               
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()" #form="ngForm">
+                        <h2 style="text-align: center; color: floralwhite">Sign Up</h2>
+
+                        <div class="form-group">
+                                <div class="row">
+                                        <div class="col-xs-6">
+                                                <input type="text" class="form-control" name="firstName"
+                                                        placeholder="First Name" required formControlName="first_name"
+                                                        [class.is-invalid]="first_name.touched && first_name.invalid"
+                                                        [(ngModel)]="user.userFirstName" />
+                                        </div>
+
+                                        <div class="col-xs-6">
+                                                <input type="text" class="form-control" name="lastName"
+                                                        placeholder="Last Name" required formControlName="last_name"
+                                                        [class.is-invalid]="last_name.touched && last_name.invalid"
+                                                        [(ngModel)]="user.userLastName" />
+                                        </div>
+                                        <div [class.d-none]="first_name.untouched || first_name.valid"
+                                                class="text-danger">
+                                                First name is required &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <div [class.d-none]="last_name.untouched || last_name.valid"
+                                                class="text-danger">
+                                                Last name is required
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="phone" placeholder="Contact Number"
+                                        formControlName="phone" pattern="^\d{10}$"
+                                        [class.is-invalid]="phone.touched && phone.invalid" required
+                                        [(ngModel)]="user.userContactNumber" />
+                                <div *ngIf="phone.errors && phone.touched ">
+                                        <div class="text-danger" *ngIf="phone.errors?.required">Phone number is required
+                                        </div>
+                                        <div class="text-danger" *ngIf="phone.errors?.pattern">Phone no must be 10 digit
+                                        </div>
+
+                                </div>
+
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="user name"
+                                        formControlName="username"
+                                        [class.is-invalid]="username.touched && username.invalid" required="username"
+                                        [(ngModel)]="user.userName" />
+
+                                <div [class.d-none]="username.untouched || username.valid" class="text-danger">
+                                        User Name is required
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="email"
+                                        placeholder="Email eg: abc@gmail.com" formControlName="email"
+                                        [class.is-invalid]="email.touched && email.invalid" required="email"
+                                        [(ngModel)]="user.userEmail">
+
+                                <div [class.d-none]="email.untouched || email.valid" class="text-danger">
+                                        Email Name is required
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <select class="form-control" name="question" formControlName="question"
+                                        [class.is-invalid]="question.touched && question.invalid" required="question"
+                                        [(ngModel)]="user.securityQuestion">
+                                        <option value="">---Select your security question---</option>
+                                        <option value="What is your pet name?">What is your pet name?</option>
+                                        <option value="What is your nationality?">What is your nationality?</option>
+                                        <option value="What is your mother's maiden name?">What is your mother's maiden
+                                                name?</option>
+                                        <option value="What is your first school name?">What is your first school name?
+                                        </option>
+                                        <option value="What is your father's middle name?">What is your father's middle
+                                                name?</option>
+
+                                </select>
+
+                                <div [class.d-none]="question.untouched || question.valid" class="text-danger">
+                                        Security question is required
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="answer" placeholder="Answer"
+                                        formControlName="answer" [class.is-invalid]="answer.touched && answer.invalid"
+                                        required="answer" [(ngModel)]="user.securityAnswer">
+                                <div [class.d-none]="answer.untouched || answer.valid" class="text-danger">
+                                        Security answer is required
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Password"
+                                        formControlName="password"
+                                        [class.is-invalid]="password.touched && password.invalid" required="email"
+                                        [(ngModel)]="user.userPassword">
+
+                                <div [class.d-none]="password.untouched || password.valid" class="text-danger">
+                                        Password is required
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="password" class="form-control" name="confirm_password"
+                                        placeholder="Confirm Password" formControlName="confirm_password"
+                                        [class.is-invalid]="confirm_password.touched && confirm_password.invalid"
+                                        required="required" [(ngModel)]="confirmPassword">
+
+                                <div [class.d-none]="confirm_password.untouched || confirm_password.valid"
+                                        class="text-danger">
+                                        Confirm password is required
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="checkbox-inline" style="color: floralwhite">
+                                        <input type="checkbox" name="checkbox" formControlName="checkbox"
+                                                [class.is-invalid]="checkbox.touched && checkbox.invalid"
+                                                required> I accept the <a>Terms of Use</a> &amp; <a>Privacy
+                                                Policy</a></label>
+                        </div>
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block"
+                                        [disabled]="form.form.invalid">Register Now</button>
+                        </div>
+                </form>
+                <div class="text-center" style="color: floralwhite">Already have an account? <a
+                                routerLink="/signin">Sign in</a>
+                </div>
+        </div>
+</div>

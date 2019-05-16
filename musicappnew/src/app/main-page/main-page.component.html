@@ -1,0 +1,465 @@
+<!-- ------------------------------left side bar start-- --------------------------->
+<div id="mySidenav" class="sidenav" style="margin-top: 10px">
+    <a href="javascript:void(0)" class="closebtn" (click)="cNav()">&times;</a>
+
+    <a routerLink="/home"><i class="lnr lnr-home"></i> &nbsp; Home</a>
+    <a routerLink="/allsongs"> <i class="lnr lnr-music-note"></i> &nbsp; All Songs</a>
+    <a routerLink="/allalbums"><i class="lnr lnr-indent-increase"></i> &nbsp; Albums</a>
+    <a routerLink="/allartists"><i class="lnr lnr-users"></i> &nbsp; Artists</a>
+    <a routerLink="/favourites"><i class="lnr lnr-heart"></i> &nbsp; My Fav</a>
+    <a routerLink="/userdetails"><i class="lnr lnr-pencil"></i> &nbsp; User Profile</a>
+    <a routerLink="/adminhome" class="adminbtn" id="adminbutton"><i class="lnr lnr-pencil"></i> &nbsp; Admin Home</a>
+
+</div>
+
+<div style="background-color: black; height: 50px;">
+    <span style="font-size:25px;cursor:pointer;padding-top: 10px; color: aliceblue; float: left;"
+        (click)="oNav()">&#9776; Menu
+    </span>
+
+
+    <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         {{user.userFirstName}}       
+        <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
+            <span class="glyphicon glyphicon-log-out" (click)="logout()"> Logout</span>
+        </button>
+    </h5>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-align: center">Feedback</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- side bar enddd ----------------------------------------------------------------------------------------------------------   -->
+
+<div id="page-wrapper">
+    <div class="inner-content">
+        <div class="music-left">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+
+                        <img src="assets/images/11.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption">
+                            <a class="trend" routerLink="/allalbums">TRENDING</a>
+                            <h3>Let Your Home</h3>
+                            <p>Album by <span>Rock star</span></p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/images/22.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption">
+                            <a class="trend" routerLink="/allalbums">TRENDING</a>
+                            <h3>Let Your Home</h3>
+                            <p>Album by <span>Rock star</span></p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/images/33.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption">
+                            <a class="trend" routerLink="/allalbums">TRENDING</a>
+                            <h3>Let Your Home</h3>
+                            <p>Album by <span>Rock star</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="albums">
+                <div class="tittle-head">
+                    <h3 class="tittle">New Releases <span class="new">New</span></h3>
+                    <a routerLink="/allalbums">
+                        <h4 class="tittle">See all</h4>
+                    </a>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v1.jpg"
+                            title="allbum-name"></a>
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
+                </div>
+
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="#small-dialog"><img src="assets/images/v2.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
+                </div>
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v3.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
+                </div>
+                <div class="col-md-3 content-grid last-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v4.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
+                </div>
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v5.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
+                </div>
+
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v6.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
+                </div>
+             
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v7.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
+                </div>
+
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v8.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
+                </div>
+
+                <div class="col-md-3 content-grid">
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v9.jpg"
+                            title="allbum-name"></a>
+
+                    <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
+                </div>
+             
+           
+                <div class="clearfix"> </div>
+            </div>
+
+
+
+            
+
+
+
+        </div>
+        <div class="music-right" style="margin-bottom:  80px">
+
+            
+            <div class="apps" style="margin-top: -1px; margin-bottom: 20px">
+              <img class="img-responsive" src="assets/images/mobile.png">
+            </div>
+            <div><img class="img-responsive" src="assets/images/mob.png">
+            </div>
+
+
+
+
+        </div>
+            
+
+       
+        <br>
+        <br>
+        <br>
+        <br>
+        <br><br>
+        <div class="container-audio" style="margin-top: -60px; margin-left: 30px" >
+            <div class="colum1">
+                <div class="row"></div>
+            </div>
+            <div class="colum1">
+                <div class="row"></div>
+            </div>
+            <div class="colum1">
+                <div class="row"></div>
+            </div>
+            <div class="colum1">
+                <div class="row"></div>
+            </div>
+            <div class="colum1">
+                <div class="row"></div>
+            </div>
+            <div class="colum1">
+                <div class="row"></div>
+            </div>
+            <div class="colum1">
+                <div class="row"></div>
+            </div>
+
+      
+      </div>
+      
+  
+
+
+
+
+        <div class="review-slider">
+            <div class="tittle-head">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="nbs-flexisel-container">
+                <div class="nbs-flexisel-inner">
+                    <ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -46.33px; display: block;">
+
+
+
+
+
+
+
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/v1.jpg" alt=""></a>
+                            <div class="slide-title">
+                                <h4>Adele21 </h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>Jan-02-16</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/v2.jpg" alt=""></a>
+                            <div class="slide-title">
+                                <h4>Adele21</h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>Jan-02-16</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/v3.jpg" alt=""></a>
+                            <div class="slide-title">
+                                <h4>Shomlock</h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>Jan-02-16</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/v4.jpg" alt=""></a>
+                            <div class="slide-title">
+                                <h4>Stuck on a feeling</h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>Jan-02-16</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/v5.jpg" alt=""></a>
+                            <div class="slide-title">
+                                <h4>Ricky Martine </h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>Jan-02-16</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a href="/allartists"><img src="assets/images/v6.jpg" alt=""></a>
+                            <div class="slide-title">
+                                <h4>Ellie Goluding </h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>Jan-02-16</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/v6.jpeg" alt=""></a>
+                            <div class="slide-title">
+                                <h4>Fifty Shades </h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>Jan-02-16</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <div class="nbs-flexisel-nav-left" style="top: 139px;"></div>
+                    <div class="nbs-flexisel-nav-right" style="top: 139px;"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(window).load(function () {
+
+                    $("#flexiselDemo1").flexisel({
+                        visibleItems: 5,
+                        animationSpeed: 1000,
+                        autoPlay: true,
+                        autoPlaySpeed: 3000,
+                        pauseOnHover: false,
+                        enableResponsiveBreakpoints: true,
+                        responsiveBreakpoints: {
+                            portrait: {
+                                changePoint: 480,
+                                visibleItems: 2
+                            },
+                            landscape: {
+                                changePoint: 640,
+                                visibleItems: 3
+                            },
+                            tablet: {
+                                changePoint: 800,
+                                visibleItems: 4
+                            }
+                        }
+                    });
+                });
+            </script>
+            <script type="text/javascript" src="assets/js/jquery.flexisel.js"></script>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!--------------------footer section start------------------------------------------------------------->
+<div class="container">
+
+</div>
+<div class="footer">
+    <div class="footer-grid">
+        <h3>Navigation</h3>
+        <ul class="list1">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="radio.html">All Songs</a></li>
+            <li><a href="browse.html">Albums</a></li>
+            <li><a href="radio.html">New Collections</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-grid">
+        <h3>Our Account</h3>
+        <ul class="list1">
+            <li><a href="#" data-toggle="modal" data-target="#myModal5">Your Account</a></li>
+            <li><a href="#">Personal information</a></li>
+            <li><a href="#">Addresses</a></li>
+            <li><a href="#">Discount</a></li>
+            <li><a href="#">Orders history</a></li>
+            <li><a href="#">Addresses</a></li>
+            <li><a href="#">Search Terms</a></li>
+        </ul>
+    </div>
+    <div class="footer-grid">
+        <h3>Our Support</h3>
+        <ul class="list1">
+            <li><a href="contact.html">Site Map</a></li>
+            <li><a href="#">Search Terms</a></li>
+            <li><a href="#">Advanced Search</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="#">Addresses</a></li>
+        </ul>
+    </div>
+    <div class="footer-grid">
+        <h3>Newsletter</h3>
+        <p class="footer_desc">Nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo
+            consequat</p>
+        <div class="search_footer">
+            <form>
+                <input type="text" placeholder="Email...." required="">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="footer-grid footer-grid_last">
+        <h3>About Us</h3>
+        <p class="footer_desc">Diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat
+            enim ad
+            minim veniam,.</p>
+        <p class="f_text">Phone: &nbsp;&nbsp;&nbsp;00-250-2131</p>
+        <p class="email">Email : &nbsp;<span><a href="mailto:mail@example.com">info(at)mailing.com</a></span>
+        </p>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+<footer>
+    <div class="clearfix"> </div>
+    <p>&copy 2016 Kakaki. All Rights Reserved .</p>
+</footer>
+<!----------------------------------footer section end--------------------------------------------------------------->

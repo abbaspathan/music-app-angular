@@ -1,0 +1,82 @@
+<!-- ------------------------------left side bar start-- --------------------------->
+<div id="mySidenav" class="sidenav" style="margin-top: 10px">
+        <a href="javascript:void(0)" class="closebtn" (click)="cNav()">&times;</a>
+
+        <a routerLink="/home"><i class="lnr lnr-home"></i> &nbsp; Home</a>
+        <a routerLink="/allsongs"> <i class="lnr lnr-music-note"></i> &nbsp; All Songs</a>
+        <a routerLink="/allalbums"><i class="lnr lnr-indent-increase"></i> &nbsp; Albums</a>
+        <a routerLink="/allartists"><i class="lnr lnr-users"></i> &nbsp; Artists</a>
+        <a routerLink="/favourites"><i class="lnr lnr-heart"></i> &nbsp; My Fav</a>
+        <a routerLink="/userdetails"><i class="lnr lnr-pencil"></i> &nbsp; User Profile</a>
+
+</div>
+
+<div style="background-color: black; height: 50px;">
+        <span style="font-size:25px;cursor:pointer;padding-top: 10px; color: aliceblue; float: left;"
+                (click)="oNav()">&#9776; Menu
+        </span>
+
+
+        <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{user.userFirstName}}
+                <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
+                        <span (click)="logout()" class="glyphicon glyphicon-log-out"> Logout</span>
+                </button>
+        </h5>
+
+</div>
+
+
+
+<div class="container signup-box" style="margin-top: 50px">
+        <div class="signup-form; col-md-4 col-md-offset-4">
+
+
+                <form (ngSubmit)="userEditProfile()" #form="ngForm">
+
+                        <div class="form-group">
+                                <div class="row">
+                                        <div class="col-xs-6">
+                                                <input type="text" class="form-control" name="firstName"
+                                                        placeholder="Edit First Name" value="{{user.userFirstName}}"
+                                                        [(ngModel)]="user.userFirstName" />
+                                        </div>
+
+                                        <div class="col-xs-6">
+                                                <input type="text" class="form-control" name="lastName"
+                                                        placeholder="Edit Last Name" value="{{user.userLastName}}"
+                                                        [(ngModel)]="user.userLastName" />
+                                        </div>
+
+
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="phone" placeholder="Contact Number"
+                                        value={{user.userContactNumber}} [(ngModel)]="user.userContactNumber" />
+
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="user name"
+                                        value="{{user.userName}}" [(ngModel)]="user.userName" />
+                        </div>
+
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="email"
+                                        placeholder="Email eg: abc@gmail.com" value="{{user.userEmail}}" readonly>
+                        </div>
+
+
+
+
+
+
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+                        </div>
+                </form>
+
+        </div>
+</div>

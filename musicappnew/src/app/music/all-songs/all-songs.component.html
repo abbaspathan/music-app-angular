@@ -1,0 +1,88 @@
+<!-- ------------------------------left side bar start-- --------------------------->
+<div id="mySidenav" class="sidenav" style="margin-top: 10px">
+    <a href="javascript:void(0)" class="closebtn" (click)="cNav()">&times;</a>
+
+    <a routerLink="/home"><i class="lnr lnr-home"></i> &nbsp; Home</a>
+    <a routerLink="/allsongs"> <i class="lnr lnr-music-note"></i> &nbsp; All Songs</a>
+    <a routerLink="/allalbums"><i class="lnr lnr-indent-increase"></i> &nbsp; Albums</a>
+    <a routerLink="/allartists"><i class="lnr lnr-users"></i> &nbsp; Artists</a>
+    <a routerLink="/favourites"><i class="lnr lnr-heart"></i> &nbsp; My Fav</a>
+    <a routerLink="/userdetails"><i class="lnr lnr-pencil"></i> &nbsp; User Profile</a>
+
+</div>
+
+<div style="background-color: black; height: 50px;">
+    <span style="font-size:25px;cursor:pointer;padding-top: 10px; color: aliceblue; float: left;"
+        (click)="oNav()">&#9776; Menu
+    </span>
+
+
+    <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         {{user.userFirstName}}   
+        <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
+            <span (click)="logout()" class="glyphicon glyphicon-log-out"> Logout</span>
+        </button>
+    </h5>
+
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-align: center">Feedback</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- side bar enddd ----------------------------------------------------------------------------------------------------------   -->
+
+
+<div class="container">
+    <div class="browse">
+        <div class="tittle-head two">
+            <h3 class="tittle">All Songs <span class="new">New</span></h3>
+            <div class="clearfix"> </div>
+        </div>
+
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-2 browse-grid sngs" *ngFor="let song of songs" >
+                    <a routerLink="/songdetails/{{ song.songId }}" style="display: inline-block"><img src="{{ song.songImage }}" class="img-responsive" style="width: 143px;height: 198px"></a>
+                    <a routerLink="/songdetails/{{ song.songId }}"><i class="glyphicon glyphicon-play-circle"></i></a>
+                    <a class="sing" routerLink="/songdetails/{{ song.songId }}">{{ song.songTitle }}</a>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</div>

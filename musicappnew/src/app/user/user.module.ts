@@ -11,6 +11,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UserService } from './user.service';
 import { UserFavouritesListDetailsComponent } from './user-favourites-list-details/user-favourites-list-details.component';
 import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.component';
+import { UserResetPasswordComponent } from './user-reset-password/user-reset-password.component';
+import { UserConfirmPasswordComponent } from './user-confirm-password/user-confirm-password.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.
         UserDetailsComponent,
         UserForgetPasswordComponent,
         UserFavouritesListDetailsComponent,
-        UserEditProfileComponent
+        UserEditProfileComponent,
+        UserResetPasswordComponent,
+        UserConfirmPasswordComponent
        
         
     ],
@@ -38,7 +42,9 @@ import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.
         UserDetailsComponent,
         UserForgetPasswordComponent,
         UserFavouritesListDetailsComponent,
-        UserEditProfileComponent
+        UserEditProfileComponent,
+        UserResetPasswordComponent,
+        UserConfirmPasswordComponent
     ],
     providers:[
         UserService

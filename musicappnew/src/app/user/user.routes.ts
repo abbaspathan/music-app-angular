@@ -6,6 +6,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserForgetPasswordComponent } from './user-forget-password/user-forget-password.component';
 import { UserFavouritesListDetailsComponent } from './user-favourites-list-details/user-favourites-list-details.component';
 import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.component';
+import { UserResetPasswordComponent } from './user-reset-password/user-reset-password.component';
+import { UserConfirmPasswordComponent } from './user-confirm-password/user-confirm-password.component';
 
 
 export const userRoutes : Routes = [
@@ -16,4 +18,6 @@ export const userRoutes : Routes = [
     { path: "userdetails", component:UserDetailsComponent},
     { path: "forget-password", component:UserForgetPasswordComponent},
     { path: "edit-profile", component:UserEditProfileComponent},
+    { path: "reset-password", component:UserResetPasswordComponent},
+    { path: "confirm-password", component:UserConfirmPasswordComponent},
 ]

@@ -10,8 +10,8 @@ export class User{
     userEmail:string;
     userContactNumber:number;
     userPassword:string;
-    SecurityQuestion:string;
-    SecurtyAnswer:string;
+    securityQuestion:string;
+    securityAnswer:string;
     role:string;
 }
 

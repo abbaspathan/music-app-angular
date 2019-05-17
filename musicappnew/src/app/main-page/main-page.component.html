@@ -8,7 +8,7 @@
     <a routerLink="/allartists"><i class="lnr lnr-users"></i> &nbsp; Artists</a>
     <a routerLink="/favourites"><i class="lnr lnr-heart"></i> &nbsp; My Fav</a>
     <a routerLink="/userdetails"><i class="lnr lnr-pencil"></i> &nbsp; User Profile</a>
-    <a routerLink="/adminhome" class="adminbtn" id="adminbutton"><i class="lnr lnr-apartment"></i> &nbsp;Admin Home</a>
+    <a routerLink="/adminhome" class="adminbtn" id="adminbutton"><i class="lnr lnr-pencil"></i> &nbsp; Admin Home</a>
 
 </div>
 
@@ -21,13 +21,47 @@
     <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         {{user.userFirstName}}       
+         {{user.userFirstName}}      
         <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
             <span class="glyphicon glyphicon-log-out" (click)="logout()"> Logout</span>
         </button>
     </h5>
 </div>
 
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-align: center">Feedback</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 <!-- side bar enddd ----------------------------------------------------------------------------------------------------------   -->
 
@@ -89,67 +123,67 @@
 
             <div class="albums">
                 <div class="tittle-head">
-                    <h3 class="tittle">New Releases <span class="new">New</span></h3>
+                    <h3 class="tittle">All Albums <span class="new">New</span></h3>
                     <a routerLink="/allalbums">
                         <h4 class="tittle">See all</h4>
                     </a>
                     <div class="clearfix"> </div>
                 </div>
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v1.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/Airlift.jpg"
+                          style="height: 220px; width: 225px"  title="allbum-name" routerLink="/allalbums"></a>
                     <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
                 </div>
 
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="#small-dialog"><img src="assets/images/v2.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/BajrangiBhaijan.jpg"
+                        style="height: 220px; width: 225px" routerLink="/allalbums"    title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
                 </div>
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v3.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/Raazi.jpg"
+                        style="height: 220px; width: 225px"    title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
                 </div>
                 <div class="col-md-3 content-grid last-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v4.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/Sairat.jpg"
+                        style="height: 220px; width: 222px"      title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
                 </div>
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v5.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/SOTY2.jpg"
+                        style="height: 220px; width: 228px; margin-left: 5px"      title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="/allalbums">Listen now</a>
                 </div>
 
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v6.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/URI.jpg"
+                        style="height: 220px; width: 225px; margin-left: 8px"      title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
                 </div>
              
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v7.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/Tiger_zinda_hai.jpg"
+                        style="height: 220px; width: 225px"        title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
                 </div>
 
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v8.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/Devdas.jpg"
+                        style="height: 220px; width: 225px"      title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
                 </div>
 
                 <div class="col-md-3 content-grid">
-                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/v9.jpg"
-                            title="allbum-name"></a>
+                    <a class="play-icon popup-with-zoom-anim" routerLink="/allalbums"><img src="assets/images/MSD.jpg"
+                        style="height: 220px; width: 225px"       title="allbum-name"></a>
 
                     <a class="button play-icon popup-with-zoom-anim" routerLink="#small-dialog">Listen now</a>
                 </div>
@@ -160,14 +194,14 @@
 
 
 
-            
+           
 
 
 
         </div>
         <div class="music-right" style="margin-bottom:  80px">
 
-            
+           
             <div class="apps" style="margin-top: -1px; margin-bottom: 20px">
               <img class="img-responsive" src="assets/images/mobile.png">
             </div>
@@ -178,7 +212,7 @@
 
 
         </div>
-            
+           
 
        
         <br>
@@ -209,20 +243,20 @@
                 <div class="row"></div>
             </div>
 
-      
+     
       </div>
-      
-  
+     
+ 
 
 
 
 
-        <div class="review-slider">
+        <div class="review-slider" >
             <div class="tittle-head">
                 <div class="clearfix"> </div>
             </div>
             <div class="nbs-flexisel-container">
-                <div class="nbs-flexisel-inner">
+                <div class="nbs-flexisel-inner" style="margin-left:30px">
                     <ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -46.33px; display: block;">
 
 
@@ -231,80 +265,80 @@
 
 
 
-                        <li class="nbs-flexisel-item" style="width: 43px;">
-                            <a routerLink="/allartists"><img src="assets/images/v1.jpg" alt=""></a>
-                            <div class="slide-title">
-                                <h4>Adele21 </h4>
+                        <!-- <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img  src="assets/images/nacchatargill.jpg" style="height: 220px; width: 235px"  alt=""></a>
+                            <div class="slide-title" >
+                                <h4>Nacchartar Gill </h4>
                             </div>
                             <div class="date-city">
-                                <h5>Jan-02-16</h5>
+                                <h5>READ MORE</h5>
+                                <div class="buy-tickets">
+                                    <a routerLink="/allartists">READ MORE</a>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/arijit-singh.jpg" height= "220px" width= "250px"  alt=""></a>
+                            <div class="slide-title">
+                                <h4>Arijit Singh</h4>
+                            </div>
+                            <div class="date-city">
+                                <h5>READ MORE</h5>
                                 <div class="buy-tickets">
                                     <a routerLink="/allartists">READ MORE</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nbs-flexisel-item" style="width: 43px;">
-                            <a routerLink="/allartists"><img src="assets/images/v2.jpg" alt=""></a>
+                            <a routerLink="/allartists"><img src="assets/images/arman-malik.jpg" style="height: 220px; width: 235px"  alt=""></a>
                             <div class="slide-title">
-                                <h4>Adele21</h4>
+                                <h4>Arman Malik</h4>
                             </div>
                             <div class="date-city">
-                                <h5>Jan-02-16</h5>
+                                <h5>READ MORE</h5>
                                 <div class="buy-tickets">
                                     <a routerLink="/allartists">READ MORE</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nbs-flexisel-item" style="width: 43px;">
-                            <a routerLink="/allartists"><img src="assets/images/v3.jpg" alt=""></a>
+                            <a routerLink="/allartists"><img src="assets/images/atifaslam.jpg" style="height: 220px; width: 235px"  alt=""></a>
                             <div class="slide-title">
-                                <h4>Shomlock</h4>
+                                <h4>Atif Aslam</h4>
                             </div>
                             <div class="date-city">
-                                <h5>Jan-02-16</h5>
+                                <h5>READ MORE</h5>
                                 <div class="buy-tickets">
                                     <a routerLink="/allartists">READ MORE</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nbs-flexisel-item" style="width: 43px;">
-                            <a routerLink="/allartists"><img src="assets/images/v4.jpg" alt=""></a>
+                            <a routerLink="/allartists"><img src="assets/images/BPraak.jpg" style="height: 220px; width: 235px"  alt=""></a>
                             <div class="slide-title">
-                                <h4>Stuck on a feeling</h4>
+                                <h4>B Praak</h4>
                             </div>
                             <div class="date-city">
-                                <h5>Jan-02-16</h5>
+                                <h5>READ MORE</h5>
                                 <div class="buy-tickets">
                                     <a routerLink="/allartists">READ MORE</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nbs-flexisel-item" style="width: 43px;">
-                            <a routerLink="/allartists"><img src="assets/images/v5.jpg" alt=""></a>
+                            <a href="/allartists"><img src="assets/images/kavitak.jpg" style="height: 220px; width: 235px"  alt=""></a>
                             <div class="slide-title">
-                                <h4>Ricky Martine </h4>
+                                <h4>Kavita Krishnamurthy</h4>
                             </div>
                             <div class="date-city">
-                                <h5>Jan-02-16</h5>
+                                <h5>READ MORE</h5>
                                 <div class="buy-tickets">
                                     <a routerLink="/allartists">READ MORE</a>
                                 </div>
                             </div>
                         </li>
-                        <li class="nbs-flexisel-item" style="width: 43px;">
-                            <a href="/allartists"><img src="assets/images/v6.jpg" alt=""></a>
-                            <div class="slide-title">
-                                <h4>Ellie Goluding </h4>
-                            </div>
-                            <div class="date-city">
-                                <h5>Jan-02-16</h5>
-                                <div class="buy-tickets">
-                                    <a routerLink="/allartists">READ MORE</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nbs-flexisel-item" style="width: 43px;">
-                            <a routerLink="/allartists"><img src="assets/images/v6.jpeg" alt=""></a>
+                        <!-- <li class="nbs-flexisel-item" style="width: 43px;">
+                            <a routerLink="/allartists"><img src="assets/images/nacchatargill.jpeg" style="height: 220px; width: 235px"  alt=""></a>
                             <div class="slide-title">
                                 <h4>Fifty Shades </h4>
                             </div>
@@ -315,7 +349,7 @@
                                 </div>
                             </div>
 
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="nbs-flexisel-nav-left" style="top: 139px;"></div>
                     <div class="nbs-flexisel-nav-right" style="top: 139px;"></div>
@@ -355,10 +389,6 @@
     </div>
 
 </div>
-
-
-
-
 
 <!--------------------footer section start------------------------------------------------------------->
 <div class="container">

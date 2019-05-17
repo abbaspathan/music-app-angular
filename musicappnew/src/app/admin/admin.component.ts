@@ -35,4 +35,10 @@ export class AdminComponent implements OnInit{
         sessionStorage.removeItem("user");
         this.router.navigate(["/signin"]);
     }
+
+
+    onClick(){
+        alert("This Feature Comming Soon.......!");
+        this.router.navigate(["/admin"]);
+    }
 }
